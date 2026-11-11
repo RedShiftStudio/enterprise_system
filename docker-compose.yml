@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  crm_api:
+    build: .
+    container_name: ai_crm_backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite+aiosqlite:///./crm.db
+      - ENVIRONMENT=production
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

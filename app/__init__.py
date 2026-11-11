@@ -1,0 +1,1 @@
+"""AI CRM Core Package"""
